@@ -8,9 +8,12 @@ export const HeaderWrapper = styled.div `
 `
 
 /**
- * logo can be cliked to jump
+ * logo can be clicked to jump
+ *
  */
-export const Logo = styled.a`
+export const Logo = styled.a.attrs({
+ href:'/'
+})`
     position: absolute;
     top: 0;
     left: 0;
@@ -20,6 +23,14 @@ export const Logo = styled.a`
     background: url(${logoPic});
     background-size: contain;
  `;
+
+export const Nav = styled.div`
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
+    background: green;
+ `;
+
 
 
 
