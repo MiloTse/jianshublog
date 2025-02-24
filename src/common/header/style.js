@@ -27,6 +27,8 @@ export const Logo = styled.a.attrs({
 export const Nav = styled.div`
     width: 960px;
     height: 100%;
+    padding-right: 70px;
+    box-sizing: border-box;
     margin: 0 auto;
  `;
 
@@ -68,7 +70,29 @@ export const NavSearch = styled.input.attrs({
  `;
 
 
+export const Addition = styled.div `
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 56px;
+`
 
-
+export const Button = styled.div `
+    float: right;
+    margin-top: 9px;
+    margin-right: 20px;
+    padding: 0 20px;
+    line-height: 38px;
+    border-radius: 19px;
+    border: 1px solid #ec6169;
+    font-size: 14px;
+    &.reg{
+     color: #ec6169;
+    }
+    &.writting{
+     color: #fff;
+     background: #ec6169;
+    }
+`
 
 
