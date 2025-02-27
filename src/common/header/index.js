@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import '../../statics/iconfont/iconfont.css'; // 引入 iconfont.css
 import { CSSTransition } from "react-transition-group";
 import {connect} from "react-redux";
-import * as actionCreators from './store/actionCreators';
+import {actionCreators } from './store/';
 import {
     HeaderWrapper,
     Logo,
