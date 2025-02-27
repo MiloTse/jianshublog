@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import '../../statics/iconfont/iconfont.css'; // 引入 iconfont.css
 import { CSSTransition } from "react-transition-group";
 import {connect} from "react-redux";
-
+import * as actionCreators from './store/actionCreators';
 import {
     HeaderWrapper,
     Logo,
@@ -70,16 +70,12 @@ const mapDispatchToProps = (dispatch) => {
     return {
         handleInputFocus(){
            console.log('focus');
-           const action = {
-               type: 'search_focus'
-           };
+           const action = actionCreators.searchFocus();
            dispatch(action);
         },
         handleInputBlur() {
             console.log('blur');
-            const action = {
-                type: 'search_blur'
-            };
+            const action = actionCreators.searchBlur();
             dispatch(action);
         }
     }
