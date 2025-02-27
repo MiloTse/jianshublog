@@ -1,22 +1,21 @@
 import * as constants from './constants';
+import {fromJS} from "immutable";
 
-
-
-const defaultState = {
+const defaultState = fromJS({
     focused: false
 
-};
+});
 
 export default (state = defaultState, action) => {
     if(action.type === constants.SEARCH_FOCUS){
-        return {
-            focused: true
-        }
+        //immutable 对象的set方法， 会结合之前immutable对象的值
+        //和设置的值，返回一个全新的对象。
+        //由于已经设置了focused为immutable,因此不能用focused:true的方式
+        //Did not change the original content
+        return state.set('focused', true);
     }
     if(action.type === constants.SEARCH_BLUR){
-        return {
-            focused: false
-        }
+        return state.set('focused', false);
     }
 
     return state;

@@ -70,8 +70,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-to star project, run 
+### To star project, run 
 yarn start
 
-to use third component for style, run
+### To use third component for style, run
 yarn add styled-components
+
+### Command used to install lib(func)
+yarn add react-redux
+yarn add immutable
