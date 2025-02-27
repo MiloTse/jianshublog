@@ -14,17 +14,14 @@ import {
 
 
 } from "./style";
+import {connect} from "react-redux";
 
 class Header extends Component{
     constructor(props) {
         super(props);
-        this.state = {
-            focused: false
-        }
-        this.handleInputFocus = this.handleInputFocus.bind(this);
-        this.handleInputBlur = this.handleInputBlur.bind(this);
         this.nodeRef = createRef();
     }
+
 
 
     render() {
@@ -40,16 +37,16 @@ class Header extends Component{
                 </NavItem>
                 <SearchWrapper>
                     <CSSTransition 
-                        in={this.state.focused} 
+                        in={this.props.focused}
                         timeout={200} 
                         classNames="slide"
                         nodeRef={this.nodeRef}>
 
                         <NavSearch
                             ref={this.nodeRef}
-                            className={this.state.focused ? 'focused': ''}
-                            onFocus={this.handleInputFocus}
-                            onBlur={this.handleInputBlur}
+                            className={this.props.focused ? 'focused': ''}
+                            onFocus={this.props.handleInputFocus}
+                            onBlur={this.props.handleInputBlur}
                         >
 
                         </NavSearch>
@@ -57,7 +54,7 @@ class Header extends Component{
 
                     </CSSTransition>
 
-                    <span className={this.state.focused ? 'focused iconfont': 'iconfont'}>
+                    <span className={this.props.focused ? 'focused iconfont': 'iconfont'}>
                         &#xe633;
                     </span>
                 </SearchWrapper>
@@ -73,20 +70,22 @@ class Header extends Component{
         )
     }
 
-    handleInputFocus(){
-       this.setState(
-           {
-               focused: true
-           }
-       )
-    }
-    handleInputBlur(){
-        this.setState(
-            {
-                focused: false
-            }
-        )
-    }
+
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+    return {
+        focused: state.focused
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleInputFocus(){
+           console.log('focus');
+        },
+        handleInputBlur() {
+            console.log('blur');
+        }
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
