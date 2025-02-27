@@ -1,6 +1,7 @@
-import React, { Component, createRef } from 'react';
+import React, { useRef } from 'react';
 import '../../statics/iconfont/iconfont.css'; // 引入 iconfont.css
 import { CSSTransition } from "react-transition-group";
+import {connect} from "react-redux";
 
 import {
     HeaderWrapper,
@@ -11,22 +12,14 @@ import {
     NavSearch,
     Addition,
     Button
-
-
 } from "./style";
-import {connect} from "react-redux";
-
-class Header extends Component{
-    constructor(props) {
-        super(props);
-        this.nodeRef = createRef();
-    }
 
 
+const Header = (props) => {
+    const nodeRef = useRef(null);
 
-    render() {
-        return (
-            <HeaderWrapper>
+    return (
+        <HeaderWrapper>
             <Logo />
             <Nav>
                 <NavItem className='left active'>首页</NavItem>
@@ -36,25 +29,22 @@ class Header extends Component{
                     <span className="iconfont">&#xe636;</span>
                 </NavItem>
                 <SearchWrapper>
-                    <CSSTransition 
-                        in={this.props.focused}
-                        timeout={200} 
+                    <CSSTransition
+                        in={props.focused}
+                        timeout={200}
                         classNames="slide"
-                        nodeRef={this.nodeRef}>
-
+                        nodeRef={nodeRef}
+                    >
                         <NavSearch
-                            ref={this.nodeRef}
-                            className={this.props.focused ? 'focused': ''}
-                            onFocus={this.props.handleInputFocus}
-                            onBlur={this.props.handleInputBlur}
+                            ref={nodeRef}
+                            className={props.focused ? 'focused': ''}
+                            onFocus={props.handleInputFocus}
+                            onBlur={props.handleInputBlur}
                         >
-
                         </NavSearch>
-
-
                     </CSSTransition>
 
-                    <span className={this.props.focused ? 'focused iconfont': 'iconfont'}>
+                    <span className={props.focused ? 'focused iconfont': 'iconfont'}>
                         &#xe633;
                     </span>
                 </SearchWrapper>
@@ -67,11 +57,9 @@ class Header extends Component{
                 <Button className='reg'>注册</Button>
             </Addition>
         </HeaderWrapper>
-        )
-    }
-
-
+    );
 }
+
 
 const mapStateToProps = (state) => {
     return {
@@ -82,9 +70,17 @@ const mapDispatchToProps = (dispatch) => {
     return {
         handleInputFocus(){
            console.log('focus');
+           const action = {
+               type: 'search_focus'
+           };
+           dispatch(action);
         },
         handleInputBlur() {
             console.log('blur');
+            const action = {
+                type: 'search_blur'
+            };
+            dispatch(action);
         }
     }
 }
