@@ -77,5 +77,7 @@ yarn start
 yarn add styled-components
 
 ### Command used to install lib(func)
+yarn add redux
 yarn add react-redux
 yarn add immutable
+yarn add react-immutable

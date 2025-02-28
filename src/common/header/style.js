@@ -119,13 +119,13 @@ export const Addition = styled.div `
 
 export const Button = styled.div `
     float: right;
-    margin-top: 9px;
-    margin-right: 20px;
+    margin: 9px 5px 10px 15px;
     padding: 0 20px;
     line-height: 38px;
     border-radius: 19px;
     border: 1px solid #ec6169;
     font-size: 14px;
+ 
     &.reg{
      color: #ec6169;
     }

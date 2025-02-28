@@ -64,17 +64,16 @@ const Header = (props) => {
 const mapStateToProps = (state) => {
     return {
         focused: state.header.get('focused')
+        // focused: state.get(['header','focused'] )
     }
 }
 const mapDispatchToProps = (dispatch) => {
     return {
         handleInputFocus(){
-           console.log('focus');
            const action = actionCreators.searchFocus();
            dispatch(action);
         },
         handleInputBlur() {
-            console.log('blur');
             const action = actionCreators.searchBlur();
             dispatch(action);
         }
