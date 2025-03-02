@@ -20,6 +20,32 @@ import {
 } from "./style";
 
 
+const getListArea = (show) => {
+    if(show){
+        return (
+
+            <SearchInfo>
+                <SearchInfoTitle>
+                    热门搜索
+                    <SearchInfoSwitch>
+                        换一批
+                    </SearchInfoSwitch>
+                </SearchInfoTitle>
+                <SearchInfoList>
+                    <SearchInfoItem>教育</SearchInfoItem>
+                    <SearchInfoItem>教育</SearchInfoItem>
+                    <SearchInfoItem>教育</SearchInfoItem>
+                    <SearchInfoItem>教育</SearchInfoItem>
+                    <SearchInfoItem>教育</SearchInfoItem>
+                </SearchInfoList>
+            </SearchInfo>
+        )
+    }else{
+        return null;
+    }
+
+}
+
 const Header = (props) => {
     const nodeRef = useRef(null);
 
@@ -52,30 +78,13 @@ const Header = (props) => {
                     <span className={props.focused ? 'focused iconfont': 'iconfont'}>
                         &#xe633;
                     </span>
-                    <SearchInfo>
-                            <SearchInfoTitle>
-                                热门搜索
-                                <SearchInfoSwitch>
-                                    换一批
-                                </SearchInfoSwitch>
-                            </SearchInfoTitle>
-                            <SearchInfoList>
-
-                            </SearchInfoList>
-                            <div>
-                                <SearchInfoItem>教育</SearchInfoItem>
-                                <SearchInfoItem>教育</SearchInfoItem>
-                                <SearchInfoItem>教育</SearchInfoItem>
-                                <SearchInfoItem>教育</SearchInfoItem>
-                                <SearchInfoItem>教育</SearchInfoItem>
-                            </div>
-                    </SearchInfo>
+                     {getListArea(props.focused)}
                 </SearchWrapper>
             </Nav>
             <Addition>
                 <Button className='writting'>
                     写文章
-                    <span className="iconfont">&#xe629;</span>
+                     <span className="iconfont">&#xe629;</span>
                 </Button>
                 <Button className='reg'>注册</Button>
             </Addition>
@@ -86,8 +95,7 @@ const Header = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        focused: state.header.get('focused')
-        // focused: state.get(['header','focused'] )
+        focused: state.getIn(['header', 'focused'])
     }
 }
 const mapDispatchToProps = (dispatch) => {

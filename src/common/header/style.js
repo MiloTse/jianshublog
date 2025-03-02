@@ -127,23 +127,14 @@ export const SearchInfoTitle = styled.div `
     color: #969696;
 `
 
-export const SearchInfoSwitch = styled.div `
+export const SearchInfoSwitch = styled.span `
     float: right;
     font-size: 13px;
 `
 
-export const SearchInfoList = styled.a `
-    display: block;
-    float: left;
-    line-height: 20px;
-    padding: 0 5px;
-    margin-right: 10px;
-    margin-bottom: 15px;
-    font-size: 12px;
-    border: 1px solid #ddd;
-    color: #969696;
-    border-radius: 2px;
-    
+export const SearchInfoList = styled.div`
+    overflow: hidden;
+     
 `
 
 export const SearchInfoItem = styled.a `
@@ -155,8 +146,8 @@ export const SearchInfoItem = styled.a `
     margin-bottom: 15px;
     font-size: 12px;
     border: 1px solid #ddd;
-    color: #969696;
-    border-radius: 2px;
+    color: #787878;
+    border-radius: 3px;
     
 `
 
