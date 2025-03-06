@@ -11,6 +11,8 @@ export const searchBlur = () => ({
     type: constants.SEARCH_BLUR
 });
 
+
+
 export const getList = () => {
     return (dispatch) => {
         console.log(123);
@@ -19,6 +21,11 @@ export const getList = () => {
             console.log(res);
             const data = res.data;
             console.log(data);
+            const action = {
+                type: 'change_list',
+                data: data.data
+            }
+            dispatch(action);
         }).catch(()=>{
             console.log('error');
         })
