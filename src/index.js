@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { combineReducers } from 'redux-immutable';
 import store from './store';
 import './style.js';
 import App from './App';

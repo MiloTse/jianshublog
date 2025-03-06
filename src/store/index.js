@@ -1,7 +1,8 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import reducer from "./reducer";
 import { Map } from 'immutable';
-import {thunk} from "redux-thunk";
+import thunk from "redux-thunk";
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const initialState = Map();

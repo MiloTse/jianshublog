@@ -1,8 +1,10 @@
-import React, { Component} from 'react';
+import React from 'react';
 import Header from "./common/header";
 import store from "./store";
 import { Provider } from 'react-redux';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from './pages/home/home';
+import Detail from './pages/detail/detail';
 
 //store passing data to Header
 function App() {
@@ -12,16 +14,12 @@ function App() {
             <Header />
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' exact render={()=><div>home</div>}></Route>
-                    <Route path='/detail' exact render={()=><div>detail</div>}></Route>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/detail' element={<Detail />} />
                 </Routes>
-
             </BrowserRouter>
-
         </div>
-
       </Provider>
-
   );
 }
 
