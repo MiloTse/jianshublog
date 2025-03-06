@@ -48,7 +48,7 @@ class Header extends Component{
 
         if (focused) {
             return (
-                <SearchInfo>
+                <SearchInfo onMouseEnter={()=>{console.log('mouseIn')}}>
                     <SearchInfoTitle>
                         热门搜索
                         <SearchInfoSwitch>

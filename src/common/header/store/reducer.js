@@ -3,6 +3,7 @@ import {fromJS} from "immutable";
 
 const defaultState = fromJS({
     focused: false,
+    mouseIn: false,
     list: [],//initial value is immutable
     page: 1,
     totalPage: 1
