@@ -81,3 +81,6 @@ yarn add redux
 yarn add react-redux
 yarn add immutable
 yarn add react-immutable
+yarn add react-transition-group
+yarn add axios
+yarn add react-router-dom
