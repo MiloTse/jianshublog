@@ -26,10 +26,28 @@ class Header extends Component{
     }
 
     getListArea () {
-        const { focused, list } = this.props;
-        if(focused){
-            return (
+        const { focused, list, page } = this.props;
+        //list is immutable, cannot use list[i] to get data in <SearchInfoItem> element
+        //use toJS() function to convert immutable list to a normal list
+        const newList = list.toJS();
+        const pageList = [];
 
+        if (newList.length) {
+            //can define page as 0. page start index should at 0
+            const start = (page - 1) * 10;
+            const end = Math.min(page * 10, newList.length);
+            
+            for (let i = start; i < end; i++) {
+                if (newList[i]) {
+                    pageList.push(
+                        <SearchInfoItem key={i}>{newList[i]}</SearchInfoItem>
+                    )
+                }
+            }
+        }
+
+        if (focused) {
+            return (
                 <SearchInfo>
                     <SearchInfoTitle>
                         热门搜索
@@ -38,11 +56,7 @@ class Header extends Component{
                         </SearchInfoSwitch>
                     </SearchInfoTitle>
                     <SearchInfoList>
-                        {
-                            list.map((item)=>{
-                                return <SearchInfoItem key={item}>{item}</SearchInfoItem>
-                            })
-                        }
+                        {pageList}
                     </SearchInfoList>
                 </SearchInfo>
             )
@@ -102,7 +116,8 @@ class Header extends Component{
 const mapStateToProps = (state) => {
     return {
         focused: state.getIn(['header', 'focused']),
-        list: state.getIn(['header', 'list'])
+        list: state.getIn(['header', 'list']),
+        page: state.getIn(['header', 'page'])//fetch page from Header
     }
 }
 const mapDispatchToProps = (dispatch) => {
