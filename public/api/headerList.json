@@ -8,6 +8,9 @@
     "Python",
     "Java",
     "Javascript",
-    "Next.js","Node.js", "Django", "Rust", "Machine Learning", "AI (Artificial Intelligence)", "DevOps", "Kubernetes", "GraphQL", "TypeScript", "Golang", "Swift", "PHP", "Ruby on Rails", "Cloud Computing", "Microservices", "WebAssembly", "SwiftUI", "SaaS (Software as a Service)", "NoSQL Databases", "Cybersecurity", "Augmented Reality (AR)", "Progressive Web Apps (PWAs)", "SEO (Search Engine Optimization)", "Digital Marketing", "Remote Work Technologies", "ChatGPT", "VR (Virtual Reality)", "Blockchain Development", "Data Science", "Internet of Things (IoT)", "Edge Computing", "Continuous Integration", "Serverless Architecture"  ]
+    "Next.js","Node.js", "Django", "Rust", "Machine Learning", "AI (Artificial Intelligence)", "DevOps", "Kubernetes", "GraphQL", "TypeScript", "Golang", "Swift", "PHP", "Ruby on Rails", "Cloud Computing", "Microservices", "WebAssembly", "SwiftUI", "SaaS (Software as a Service)", "NoSQL Databases", "Cybersecurity", "Augmented Reality (AR)", "Progressive Web Apps (PWAs)", "SEO (Search Engine Optimization)", "Digital Marketing", "Remote Work Technologies", "ChatGPT", "VR (Virtual Reality)", "Blockchain Development", "Data Science", "Internet of Things (IoT)", "Edge Computing", "Continuous Integration", "Serverless Architecture"  ,
+    "Artificial Neural Networks", "Machine Vision", "Data Analytics", "Quantum Computing", "User Experience (UX)", "Content Management Systems (CMS)", "Hybrid Mobile Apps", "Digital Twins", "API Development"
+  ]
+
 
 }
