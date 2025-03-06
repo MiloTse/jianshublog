@@ -142,9 +142,14 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(actionCreators.mouseLeave());
         },
         handleChangePage(page, totalPage){
+            if(page< totalPage){
+                dispatch(actionCreators.changePage(page+1));
+            }else{
+                //restore to the first page if over totalPage
+                dispatch(actionCreators.changePage(1));
+            }
             console.log(page, totalPage);
-            dispatch(actionCreators.changePage());
-        }
+         }
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
