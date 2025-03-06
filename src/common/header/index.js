@@ -26,7 +26,7 @@ class Header extends Component{
     }
 
     getListArea () {
-        const { focused, list, page, mouseIn, handleMouseEnter, handleMouseLeave, handleChangePage } = this.props;
+        const { focused, list, page, totalPage, mouseIn, handleMouseEnter, handleMouseLeave, handleChangePage } = this.props;
         //list is immutable, cannot use list[i] to get data in <SearchInfoItem> element
         //use toJS() function to convert immutable list to a normal list
         const newList = list.toJS();
@@ -55,7 +55,7 @@ class Header extends Component{
                 >
                     <SearchInfoTitle>
                         热门搜索
-                        <SearchInfoSwitch onClick={handleChangePage}>
+                        <SearchInfoSwitch onClick={()=>handleChangePage(page, totalPage)}>
                             换一批
                         </SearchInfoSwitch>
                     </SearchInfoTitle>
@@ -122,6 +122,7 @@ const mapStateToProps = (state) => {
         focused: state.getIn(['header', 'focused']),
         list: state.getIn(['header', 'list']),
         page: state.getIn(['header', 'page']),//fetch page from Header
+        totalPage: state.getIn(['header', 'totalPage']),
         mouseIn: state.getIn(['header', 'mouseIn'])//fetch page from Header
     }
 }
@@ -140,7 +141,8 @@ const mapDispatchToProps = (dispatch) => {
         handleMouseLeave(){
             dispatch(actionCreators.mouseLeave());
         },
-        handleChangePage(){
+        handleChangePage(page, totalPage){
+            console.log(page, totalPage);
             dispatch(actionCreators.changePage());
         }
     }
