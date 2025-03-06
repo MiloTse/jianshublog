@@ -55,8 +55,8 @@ class Header extends Component{
                 >
                     <SearchInfoTitle>
                         热门搜索
-                        <SearchInfoSwitch onClick={() => handleChangePage(page, totalPage)}>
-                            <span className="iconfont spin">&#xe851;</span>
+                        <SearchInfoSwitch onClick={() => handleChangePage(page, totalPage, this.spinIcon)}>
+                            <span ref={(icon) => {this.spinIcon = icon}} className="iconfont spin">&#xe851;</span>
                             换一批
                         </SearchInfoSwitch>
                     </SearchInfoTitle>
@@ -142,7 +142,8 @@ const mapDispatchToProps = (dispatch) => {
         handleMouseLeave(){
             dispatch(actionCreators.mouseLeave());
         },
-        handleChangePage(page, totalPage){
+        handleChangePage(page, totalPage, spin){
+            console.log(spin)
             if(page< totalPage){
                 dispatch(actionCreators.changePage(page+1));
             }else{
