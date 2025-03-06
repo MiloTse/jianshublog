@@ -16,6 +16,9 @@ export const getList = () => {
         console.log(123);
         axios.get('/api/headerList.json').then((res)=>{
             console.log('ok');
+            console.log(res);
+            const data = res.data;
+            console.log(data);
         }).catch(()=>{
             console.log('error');
         })
