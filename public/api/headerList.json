@@ -1,1 +1,13 @@
-testOk
+{
+  "success": true,
+  "data": [
+    "React",
+    "Blockchain",
+    "Vue",
+    "Flutter",
+    "Python",
+    "Java",
+    "Javascript"
+  ]
+
+}
