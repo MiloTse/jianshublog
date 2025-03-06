@@ -37,11 +37,11 @@ class Header extends Component{
                         </SearchInfoSwitch>
                     </SearchInfoTitle>
                     <SearchInfoList>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
-                        <SearchInfoItem>教育</SearchInfoItem>
+                        {
+                            this.props.list.map((item)=>{
+                                return <SearchInfoItem key={item}>{item}</SearchInfoItem>
+                            })
+                        }
                     </SearchInfoList>
                 </SearchInfo>
             )
