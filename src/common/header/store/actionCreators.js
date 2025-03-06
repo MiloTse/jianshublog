@@ -1,5 +1,6 @@
 import * as constants from './constants';
 import axios from "axios";
+import {fromJS} from "immutable";
 
 export const searchFocus = () =>({
     type: constants.SEARCH_FOCUS
@@ -13,7 +14,8 @@ export const searchBlur = () => ({
 
 const changeList = (data) => ({
         type: constants.CHANGE_LIST,
-        data
+        //convert data to immutable type to match initial list at defaultState at store/reducer.js file
+        data: fromJS(data)
     }
 )
 

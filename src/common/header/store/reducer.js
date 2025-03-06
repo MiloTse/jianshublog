@@ -3,7 +3,7 @@ import {fromJS} from "immutable";
 
 const defaultState = fromJS({
     focused: false,
-    list: []
+    list: []//initial value is immutable
 
 });
 
@@ -19,8 +19,8 @@ export default (state = defaultState, action) => {
         return state.set('focused', false);
     }
     if(action.type === constants.CHANGE_LIST){
-        console.log('CHANGE_LIST_test');
-        return state;
+        // console.log('CHANGE_LIST_test');
+        return state.set('list', action.data);
     }
     return state;
 }
