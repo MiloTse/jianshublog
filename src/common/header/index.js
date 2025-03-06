@@ -104,12 +104,12 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         handleInputFocus(){
-           const action = actionCreators.searchFocus();
-           dispatch(action);
+
+
+           dispatch(actionCreators.searchFocus());
         },
         handleInputBlur() {
-            const action = actionCreators.searchBlur();
-            dispatch(action);
+            dispatch(actionCreators.searchBlur());
         }
     }
 }
