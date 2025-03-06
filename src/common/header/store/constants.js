@@ -1,3 +1,4 @@
+export let CHANGE_PAGE ='header/CHANGE_PAGE';
 export let MOUSE_LEAVE = 'header/MOUSE_LEAVE';
 export let MOUSE_ENTER = 'header/MOUSE_ENTER';
 export let CHANGE_LIST = 'header/CHANGE_LIST';

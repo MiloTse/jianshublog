@@ -2,6 +2,8 @@ import * as constants from './constants';
 import axios from "axios";
 import {fromJS} from "immutable";
 
+
+
 const changeList = (data) => ({
         type: constants.CHANGE_LIST,
         //convert data to immutable type to match initial list at defaultState at store/reducer.js file
@@ -26,6 +28,10 @@ export const mouseEnter = () => ({
 export const mouseLeave = () => ({
     type: constants.MOUSE_LEAVE
 });
+export const changePage = () => ({
+    type: constants.CHANGE_PAGE
+});
+
 
 
 export const getList = () => {
