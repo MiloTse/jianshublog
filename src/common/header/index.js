@@ -25,8 +25,8 @@ class Header extends Component{
         this.searchRef = React.createRef();
     }
 
-    getListArea (show) {
-        if(show){
+    getListArea () {
+        if(this.props.focused){
             return (
 
                 <SearchInfo>
@@ -81,7 +81,7 @@ class Header extends Component{
                         <span className={this.props.focused ? 'focused iconfont': 'iconfont'}>
                         &#xe633;
                     </span>
-                        {this.getListArea(this.props.focused)}
+                        {this.getListArea()}
                     </SearchWrapper>
                 </Nav>
                 <Addition>
