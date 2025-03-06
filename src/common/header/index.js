@@ -26,7 +26,7 @@ class Header extends Component{
     }
 
     getListArea () {
-        const { focused, list, page, handleMouseEnter, handleMouseLeave } = this.props;
+        const { focused, list, page, mouseIn, handleMouseEnter, handleMouseLeave } = this.props;
         //list is immutable, cannot use list[i] to get data in <SearchInfoItem> element
         //use toJS() function to convert immutable list to a normal list
         const newList = list.toJS();
@@ -46,7 +46,7 @@ class Header extends Component{
             }
         }
 
-        if (focused) {
+        if (focused || mouseIn) {
             return (
                 <SearchInfo
                     onMouseEnter={handleMouseEnter}
@@ -121,7 +121,8 @@ const mapStateToProps = (state) => {
     return {
         focused: state.getIn(['header', 'focused']),
         list: state.getIn(['header', 'list']),
-        page: state.getIn(['header', 'page'])//fetch page from Header
+        page: state.getIn(['header', 'page']),//fetch page from Header
+        mouseIn: state.getIn(['header', 'mouseIn'])//fetch page from Header
     }
 }
 const mapDispatchToProps = (dispatch) => {
