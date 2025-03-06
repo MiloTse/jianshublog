@@ -26,7 +26,7 @@ class Header extends Component{
     }
 
     getListArea () {
-        const { focused, list, page, handleMouseEnter } = this.props;
+        const { focused, list, page, handleMouseEnter, handleMouseLeave } = this.props;
         //list is immutable, cannot use list[i] to get data in <SearchInfoItem> element
         //use toJS() function to convert immutable list to a normal list
         const newList = list.toJS();
@@ -48,7 +48,11 @@ class Header extends Component{
 
         if (focused) {
             return (
-                <SearchInfo onMouseEnter={handleMouseEnter}>
+                <SearchInfo
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+
+                >
                     <SearchInfoTitle>
                         热门搜索
                         <SearchInfoSwitch>
@@ -131,6 +135,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         handleMouseEnter(){
             dispatch(actionCreators.mouseEnter());
+        },
+        handleMouseLeave(){
+            dispatch(actionCreators.mouseLeave());
         }
     }
 }
