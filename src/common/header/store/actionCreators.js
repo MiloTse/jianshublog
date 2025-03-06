@@ -5,7 +5,8 @@ import {fromJS} from "immutable";
 const changeList = (data) => ({
         type: constants.CHANGE_LIST,
         //convert data to immutable type to match initial list at defaultState at store/reducer.js file
-        data: fromJS(data)
+        data: fromJS(data),
+        totalPage: Math.ceil(data.length / 10)
     }
 )
 export const searchFocus = () =>({
