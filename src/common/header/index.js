@@ -55,7 +55,8 @@ class Header extends Component{
                 >
                     <SearchInfoTitle>
                         热门搜索
-                        <SearchInfoSwitch onClick={()=>handleChangePage(page, totalPage)}>
+                        <SearchInfoSwitch onClick={() => handleChangePage(page, totalPage)}>
+                            <span className="iconfont spin">&#xe851;</span>
                             换一批
                         </SearchInfoSwitch>
                     </SearchInfoTitle>
@@ -99,7 +100,7 @@ class Header extends Component{
                             </NavSearch>
                         </CSSTransition>
 
-                        <span className={focused ? 'focused iconfont': 'iconfont'}>
+                        <span className={focused ? 'focused iconfont zoom': 'iconfont zoom'}>
                         &#xe633;
                     </span>
                         {this.getListArea()}
