@@ -19,6 +19,9 @@ export const searchBlur = () => ({
     type: constants.SEARCH_BLUR
 });
 
+export const mouseEnter = () => ({
+    type: constants.MOUSE_ENTER
+});
 
 
 export const getList = () => {

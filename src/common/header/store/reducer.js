@@ -18,6 +18,8 @@ export default (state = defaultState, action) => {
         case constants.CHANGE_LIST:
             return state.set('list', action.data)
                 .set('totalPage',action.totalPage);
+        case constants.MOUSE_ENTER:
+            return state.set('mouseIn', true);
         default:
             return state;
     }
