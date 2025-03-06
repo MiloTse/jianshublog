@@ -16,8 +16,16 @@ export default (state = defaultState, action) => {
         case constants.SEARCH_BLUR:
             return state.set('focused', false);
         case constants.CHANGE_LIST:
-            return state.set('list', action.data)
-                .set('totalPage',action.totalPage);
+            //use state merge function to do multiple set value
+            return state.merge({
+                list: action.data,
+                totalPage:action.totalPage
+            })
+
+            // state.set('list', action.data).set('totalPage',action.totalPage);
+
+
+
         case constants.MOUSE_ENTER:
             return state.set('mouseIn', true);
         case constants.MOUSE_LEAVE:

@@ -31,7 +31,7 @@ class Header extends Component{
         //use toJS() function to convert immutable list to a normal list
         const newList = list.toJS();
         const pageList = [];
-
+        //set a condition to check if newList is not empty, avoiding undefined at the beginning
         if (newList.length) {
             //can define page as 0. page start index should at 0
             const start = (page - 1) * 10;
