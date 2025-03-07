@@ -1,1 +1,0 @@
-export const CHANGE_TOPIC_LIST = 'home/CHANGE_TOPIC_LIST';
