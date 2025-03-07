@@ -1,10 +1,5 @@
 import { fromJS } from 'immutable';
 import { CHANGE_TOPIC_LIST } from './constants';
-import hot_in_7_days from '../../../statics/recommend/hot_in_7_days.png'
-import copyright from '../../../statics/recommend/copyright.png'
-import member from '../../../statics/recommend/member.png'
-import daily_update_challenge from '../../../statics/recommend/daily_update_challenge.png'
-import best_serial from '../../../statics/recommend/best_serial.png'
 
 
 const defaultState = fromJS({
@@ -15,8 +10,18 @@ const defaultState = fromJS({
 
  const reducer = (state = defaultState, action) => {
     switch (action.type) {
-        case CHANGE_TOPIC_LIST:
-            return state.set('topicList', action.data);
+        case 'change_home_data':
+            return state.merge(
+                {
+                    'topicList':fromJS(action.topicList),
+                    'articleList': fromJS(action.articleList),
+                    'recommendList': fromJS(action.recommendList),
+                }
+
+
+
+
+            );
         default:
             return state;
     }

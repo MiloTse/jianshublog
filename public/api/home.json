@@ -52,23 +52,23 @@
     "recommendList": [
       {
         "id": 1,
-        "imgUrl": "/api/images/hot_in_7_days.png"
+        "imgUrl": "/api/images/recommend/hot_in_7_days.png"
       },
       {
         "id": 2,
-        "imgUrl": "/api/images/copyright.png"
+        "imgUrl": "/api/images/recommend/copyright.png"
       },
       {
         "id": 3,
-        "imgUrl": "/api/images/member.png"
+        "imgUrl": "/api/images/recommend/member.png"
       },
       {
         "id": 4,
-        "imgUrl": "/api/images/daily_update_challenge.png"
+        "imgUrl": "/api/images/recommend/daily_update_challenge.png"
       },
       {
         "id": 5,
-        "imgUrl": "/api/images/best_serial.png"
+        "imgUrl": "/api/images/recommend/best_serial.png"
       }
     ]
   }
