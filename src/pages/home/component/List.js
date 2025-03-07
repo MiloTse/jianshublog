@@ -12,10 +12,10 @@ class List extends Component {
                 {
                     list.map((item) =>{
                     return (
-                        <ListItem>
+                        <ListItem key={item.get('id')}>
                             <img className='pic'
                                  src={item.get('imgUrl')}
-                                 alt={item.get('alt')}/>
+                                 alt={item.get('title')}/>
                             <ListInfo>
                                 <h3 className='title'>{item.get('title')}</h3>
                                 <p className='desc'> {item.get('desc')}</p>
