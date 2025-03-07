@@ -100,6 +100,24 @@ export const RecommendItem    = styled.div`
 `;
 
 
+export const WriterWrapper    = styled.div`
+    width: 278px;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    height: 300px;
+    line-height:300px;
+    text-aglign:center;
+`;
+
+export const WriterItem    = styled.div`
+    width: 280px;
+    height: 50px;
+     background: url(${(props) => props.imgUrl});
+    //background: url(${logoPic});
+    background-size: contain;
+`;
+
+
 
 
 
