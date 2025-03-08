@@ -8,9 +8,8 @@ import Topic from './component/Topic';
 import List from './component/List';
 import Recommend from './component/Recommend';
 import Writer from './component/Writer';
-import axios from "axios";
 import {connect} from "react-redux";
-
+import { actionCreators } from './store'
 
 class Home extends Component {
     render() {
@@ -36,16 +35,8 @@ class Home extends Component {
 
 const mapDispatch = (dispatch) => ({
     changeHomeData(){
-        axios.get('/api/home.json').then((res) => {
-            const result = res.data.data;
-            const action = {
-                type: 'change_home_data',
-                topicList: result.topicList,
-                articleList: result.articleList,
-                recommendList: result.recommendList
-            }
-            dispatch(action);
-        })
+        const action = actionCreators.getHomeInfo();
+        dispatch(action);//here action is not func not an obj
     }
 })
 
