@@ -1,7 +1,7 @@
 import * as constants  from './constants';
 import axios from "axios";
 import {ADD_ARTICLE_LIST} from "./constants";
-import { List} from "immutable";
+import { fromJS} from "immutable";
 
 const changeHomeData = (result) => ({
     type: constants.CHANGE_HOME_DATA,
@@ -10,10 +10,11 @@ const changeHomeData = (result) => ({
     recommendList: result.recommendList
 })
 
-//List function from immutable can also convert normal obj to immutable obj
+//List function from immutable can also convert normal obj to immutable obj, but just just convert the
+//outer, except the inner
 const addHomeList = (list) => ({
     type: constants.ADD_ARTICLE_LIST,
-    list: List(list)
+    list: fromJS(list)
 })
 
 export const getHomeInfo = () => {
