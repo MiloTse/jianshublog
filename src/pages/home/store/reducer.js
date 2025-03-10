@@ -17,8 +17,10 @@ const defaultState = fromJS({
                     recommendList: fromJS(action.recommendList),
                 });
         case constants.ADD_ARTICLE_LIST:
-            return state.set('articleList', state.get('articleList').concat(action.list));
-
+             return state.merge({
+                 articleList: state.get('articleList').concat(action.list),
+                 articlePage: action.nextPage
+            });
         default:
             return state;
     }

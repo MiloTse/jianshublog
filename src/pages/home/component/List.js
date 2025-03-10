@@ -24,7 +24,7 @@ class List extends Component {
                         );
                     })
                 }
-                <LoadMore onClick={()=>getMoreList(page)}>LoadMore</LoadMore>
+                <LoadMore onClick={() => getMoreList(page)}>LoadMore</LoadMore>
             </div>
         )
     }
