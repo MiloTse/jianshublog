@@ -26,10 +26,10 @@ export const getHomeInfo = () => {
     }
 }
 
-export const getMoreList = () => {
+export const getMoreList = (page) => {
     return (dispatch) => {
         console.log('click to load more');
-        axios.get('/api/homeList.json').then((res) => {
+        axios.get('/api/homeList.json?page='+page).then((res) => {
             const result = res.data.data;
             console.log(result);
             dispatch(addHomeList(result));

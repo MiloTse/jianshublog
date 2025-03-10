@@ -5,7 +5,7 @@ import { actionCreators } from '../store'
 
 class List extends Component {
     render() {
-        const { list, getMoreList } = this.props;
+        const { list, getMoreList, page } = this.props;
 
         return (
             <div>
@@ -24,7 +24,7 @@ class List extends Component {
                         );
                     })
                 }
-                <LoadMore onClick={getMoreList}>LoadMore</LoadMore>
+                <LoadMore onClick={()=>getMoreList(page)}>LoadMore</LoadMore>
             </div>
         )
     }
@@ -33,12 +33,13 @@ class List extends Component {
 
 
 const mapState = (state) => ({
-    list: state.getIn(['home', 'articleList'])
+    list: state.getIn(['home', 'articleList']),
+    page: state.getIn(['home', 'articlePage'])
 })
 
 const mapDispatch = (dispatch) => ({
-    getMoreList(){
-        dispatch(actionCreators.getMoreList())
+    getMoreList(page){
+        dispatch(actionCreators.getMoreList(page))
     }
 })
 

@@ -4,7 +4,8 @@ import * as constants  from './constants';
 const defaultState = fromJS({
     topicList: [],
     articleList:[],
-    recommendList: []
+    recommendList: [],
+    articlePage: 1
 });
 
  const reducer = (state = defaultState, action) => {
