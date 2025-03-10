@@ -117,6 +117,17 @@ export const WriterItem    = styled.div`
     background-size: contain;
 `;
 
+export const LoadMore    = styled.div`
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin: 30px 0;
+    background: #a5a5a5;
+    text-align:center;
+    border-radius: 20px;
+    cursor: pointer;
+`;
+
 
 
 

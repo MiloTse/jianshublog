@@ -16,3 +16,9 @@ export const getHomeInfo = () => {
         })
     }
 }
+
+export const getMoreList = () => {
+    return (dispatch) => {
+        console.log('click to load more');
+    }
+}
