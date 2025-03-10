@@ -1,11 +1,19 @@
 import * as constants  from './constants';
 import axios from "axios";
+import {ADD_ARTICLE_LIST} from "./constants";
+import { List} from "immutable";
 
 const changeHomeData = (result) => ({
     type: constants.CHANGE_HOME_DATA,
     topicList: result.topicList,
     articleList: result.articleList,
     recommendList: result.recommendList
+})
+
+//List function from immutable can also convert normal obj to immutable obj
+const addHomeList = (list) => ({
+    type: constants.ADD_ARTICLE_LIST,
+    list: List(list)
 })
 
 export const getHomeInfo = () => {
@@ -23,6 +31,8 @@ export const getMoreList = () => {
         axios.get('/api/homeList.json').then((res) => {
             const result = res.data.data;
             console.log(result);
+            dispatch(addHomeList(result));
+
         })
     }
 }
