@@ -36,3 +36,9 @@ export const getMoreList = (page) => {
         })
     }
 }
+
+//trigger to pass to reducer
+export const toggleTopShow = (show) => ({
+    type: constants.TOGGLE_SCROLL_TOP,
+    show
+})

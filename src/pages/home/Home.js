@@ -10,8 +10,13 @@ import Recommend from './component/Recommend';
 import Writer from './component/Writer';
 import {connect} from "react-redux";
 import { actionCreators } from './store'
+import { BackToTop } from './style'
+
 
 class Home extends Component {
+    handleScrollTop(){
+        window.scrollTo(0,0);
+    }
     render() {
         return (
             <HomeWrapper>
@@ -24,21 +29,40 @@ class Home extends Component {
                     <Recommend />
                     <Writer />
                 </HomeRight>
+                {this.props.showScroll ?  <BackToTop onClick={this.handleScrollTop}>Back To Top</BackToTop> : null}
+
             </HomeWrapper>
         )
     }
     componentDidMount() {
         this.props.changeHomeData();
-
+        this.bindEvents();
+    }
+    bindEvents(){
+        window.addEventListener('scroll', this.props.changeScrollTopShow)
     }
 }
+
+const mapState = (state) => ({
+    showScroll: state.getIn(['home', 'showScroll'])
+})
+
+
 
 const mapDispatch = (dispatch) => ({
     changeHomeData(){
         const action = actionCreators.getHomeInfo();
         dispatch(action);//here action is not func not an obj
+    },
+    changeScrollTopShow(event){
+        if(document.documentElement.scrollTop> 100){
+            dispatch(actionCreators.toggleTopShow(true))
+        }else{
+            dispatch(actionCreators.toggleTopShow(false))
+        }
+        console.log(document.documentElement.scrollTop);
     }
 })
 
 
-export default connect(null,mapDispatch)(Home);
+export default connect(mapState,mapDispatch)(Home);
