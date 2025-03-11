@@ -10,15 +10,13 @@ import Detail from './pages/detail/Detail';
 function App() {
   return (
       <Provider store={store}>
-        <div>
+        <BrowserRouter>
             <Header />
-            <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/detail' element={<Detail />} />
-                </Routes>
-            </BrowserRouter>
-        </div>
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/detail' element={<Detail />} />
+            </Routes>
+        </BrowserRouter>
       </Provider>
   );
 }
