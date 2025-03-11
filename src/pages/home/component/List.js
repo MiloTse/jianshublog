@@ -3,6 +3,7 @@ import { ListItem, ListInfo, LoadMore } from '../style';
 import { connect} from "react-redux";
 import { actionCreators } from '../store'
 
+
 class List extends PureComponent {
     render() {
         const { list, getMoreList, page } = this.props;
@@ -12,15 +13,17 @@ class List extends PureComponent {
                 {
                     list.map((item, index) =>{
                         return (
-                            <ListItem key={index}>
-                                <img className='pic'
-                                     src={item.get('imgUrl')}
-                                     alt={item.get('title')}/>
-                                <ListInfo>
-                                    <h3 className='title'>{item.get('title')}</h3>
-                                    <p className='desc'> {item.get('desc')}</p>
-                                </ListInfo>
-                            </ListItem>
+                            <a key={index} href={'/detail/' + item.get('id')}>
+                                <ListItem key={index}>
+                                    <img className='pic'
+                                         src={item.get('imgUrl')}
+                                         alt={item.get('title')}/>
+                                    <ListInfo>
+                                        <h3 className='title'>{item.get('title')}</h3>
+                                        <p className='desc'> {item.get('desc')}</p>
+                                    </ListInfo>
+                                </ListItem>
+                            </a>
                         );
                     })
                 }
