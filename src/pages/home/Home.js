@@ -1,4 +1,4 @@
-import React ,{ Component} from "react";
+import React ,{ PureComponent} from "react";
 import {
     HomeWrapper,
     HomeLeft,
@@ -13,7 +13,7 @@ import { actionCreators } from './store'
 import { BackToTop } from './style'
 
 
-class Home extends Component {
+class Home extends PureComponent {
     handleScrollTop(){
         window.scrollTo(0,0);
     }
