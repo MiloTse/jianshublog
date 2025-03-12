@@ -76,11 +76,20 @@ yarn start
 ### To use third component for style, run
 yarn add styled-components
 
-### Command used to install lib(func)
+### Commands used to install lib(func)
 yarn add redux
+
 yarn add react-redux
+
+yarn add redux-thunk
+
 yarn add immutable
+
 yarn add react-immutable
+
 yarn add react-transition-group
+
 yarn add axios
+
 yarn add react-router-dom
+
