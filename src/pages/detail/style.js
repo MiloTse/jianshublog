@@ -18,7 +18,18 @@ export const DetailHeader = styled.div`
 `;
 
 export const Content = styled.div`
- 
+    color: #2f2f2f;
+    img {
+        width: 100%;
+    }
+    p {
+        margin: 25px 0;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    b {
+        font-weight: bold;
+    }
 `;
 
 
