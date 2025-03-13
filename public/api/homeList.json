@@ -3,26 +3,26 @@
   "data": [
           {
             "id": 5,
-            "title": "5:年后首谈车祸：既然活下来了，就不能白白活着",
-            "desc": "文/麦大人01胡歌又刷屏了。近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的噪音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：",
+            "title": "React Introduction",
+            "desc": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library that aims to make building user interfaces based on components more 'seamless'.It is maintained by Meta (formerly Facebook) and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js and Remix[a]. Because React is only concerned with the user interface and rendering components to the DOM, React applications often rely on libraries for routing and other client-side functionality.A key advantage of React is that it only re-renders those parts of the page that have changed, avoiding unnecessary re-rendering of unchanged DOM elements.",
             "imgUrl": "//upload.jianshu.io/collections/images/21/20120316041115481.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
           },
           {
             "id": 6,
-            "title": "6:年后首谈车祸：既然活下来了，就不能白白活着",
-            "desc": "文/麦大人01胡歌又刷屏了。近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的噪音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：",
+            "title": "React Introduction",
+            "desc": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library that aims to make building user interfaces based on components more 'seamless'.It is maintained by Meta (formerly Facebook) and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js and Remix[a]. Because React is only concerned with the user interface and rendering components to the DOM, React applications often rely on libraries for routing and other client-side functionality.A key advantage of React is that it only re-renders those parts of the page that have changed, avoiding unnecessary re-rendering of unchanged DOM elements.",
             "imgUrl": "//upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
           },
           {
             "id": 7,
-            "title": "7:年后首谈车祸：既然活下来了，就不能白白活着",
-            "desc": "文/麦大人01胡歌又刷屏了。近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的噪音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：",
+            "title": "React Introduction",
+            "desc": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library that aims to make building user interfaces based on components more 'seamless'.It is maintained by Meta (formerly Facebook) and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js and Remix[a]. Because React is only concerned with the user interface and rendering components to the DOM, React applications often rely on libraries for routing and other client-side functionality.A key advantage of React is that it only re-renders those parts of the page that have changed, avoiding unnecessary re-rendering of unchanged DOM elements.",
             "imgUrl": "//upload.jianshu.io/collections/images/261938/man-hands-reading-boy-large.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
           },
           {
             "id": 8,
-            "title": "8:年后首谈车祸：既然活下来了，就不能白白活着",
-            "desc": "文/麦大人01胡歌又刷屏了。近日他上了《朗读者》，而这一期的主题是“生命”，他用磁性的噪音，朗读了一段《哈姆雷特》中的经典独白，相当震撼：",
+            "title": "React Introduction",
+            "desc": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library that aims to make building user interfaces based on components more 'seamless'.It is maintained by Meta (formerly Facebook) and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js and Remix[a]. Because React is only concerned with the user interface and rendering components to the DOM, React applications often rely on libraries for routing and other client-side functionality.A key advantage of React is that it only re-renders those parts of the page that have changed, avoiding unnecessary re-rendering of unchanged DOM elements.",
             "imgUrl": "//upload.jianshu.io/collections/images/4/sy_20091020135145113016.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"
           }
   ]
