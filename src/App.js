@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from './pages/home/Home';
 import Detail from './pages/detail/Detail';
+import Login from './pages/login/Login';
 
 //store passing data to Header
 function App() {
@@ -14,6 +15,7 @@ function App() {
             <Header />
             <Routes>
                 <Route path='/' element={<Home />} />
+                <Route path='/login' element={<Login />} />
                 <Route path='/detail/:id' element={<Detail />} />
             </Routes>
         </BrowserRouter>

@@ -9,7 +9,7 @@ const Detail = (props) => {
     
     useEffect(() => {
         props.getDetail(id);
-    }, [id]);
+    }, [id, props.getDetail]);
 
     console.log("Detail props id:", id);
     
