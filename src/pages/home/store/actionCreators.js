@@ -3,6 +3,8 @@ import axios from "axios";
 import {ADD_ARTICLE_LIST} from "./constants";
 import { fromJS} from "immutable";
 
+
+
 const changeHomeData = (result) => ({
     type: constants.CHANGE_HOME_DATA,
     topicList: result.topicList,
