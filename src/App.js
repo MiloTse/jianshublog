@@ -6,6 +6,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from './pages/home/Home';
 import Detail from './pages/detail/Detail';
 import Login from './pages/login/Login';
+import Write from './pages/write/Write';
 
 //store passing data to Header
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/login' element={<Login />} />
+                <Route path='/write' element={<Write />} />
                 <Route path='/detail/:id' element={<Detail />} />
             </Routes>
         </BrowserRouter>
