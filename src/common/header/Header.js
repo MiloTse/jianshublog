@@ -4,6 +4,7 @@ import { CSSTransition } from "react-transition-group";
 import {connect} from "react-redux";
 import {actionCreators } from './store/';
 import {Link} from 'react-router-dom';
+import {actionCreators as loginActionCreators} from '../../pages/login/store';
 import {
     HeaderWrapper,
     Logo,
@@ -19,6 +20,7 @@ import {
     Addition,
     Button
 } from "./style";
+import {logout} from "../../pages/login/store/actionCreators";
 
 class Header extends Component{
     constructor(props) {
@@ -73,7 +75,7 @@ class Header extends Component{
     }
 
     render() {
-        const { focused,handleInputFocus, handleInputBlur, list, login } = this.props;
+        const { focused,handleInputFocus, handleInputBlur, list, login, logout } = this.props;
 
         return (
             <HeaderWrapper>
@@ -85,7 +87,7 @@ class Header extends Component{
                     <NavItem className='left'>Download App</NavItem>
                     {
                     login ?
-                        <NavItem className='right'>Logout</NavItem> :
+                        <NavItem  className='right' onClick={logout}>Logout</NavItem> :
                         <Link to='/login'><NavItem className='right'>Login</NavItem></Link>
                     }
 
@@ -169,7 +171,10 @@ const mapDispatchToProps = (dispatch) => {
                 dispatch(actionCreators.changePage(1));
             }
             console.log(page, totalPage);
-         }
+         },
+        logout() {
+            dispatch(loginActionCreators.logout());
+        }
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
