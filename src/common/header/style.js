@@ -71,7 +71,7 @@ export const SearchWrapper = styled.div`
  `;
 
 export const NavSearch = styled.input.attrs({
-  placeholder:'搜索'
+  placeholder:'Search'
 })`
     width: 160px;
     height: 38px;
@@ -174,10 +174,10 @@ export const Addition = styled.div `
 
 export const Button = styled.div `
     float: right;
-    margin: 9px 5px 10px 15px;
+    margin: 10px 5px 10px 15px;
     padding: 0 20px;
     line-height: 38px;
-    border-radius: 19px;
+    border-radius: 20px;
     border: 1px solid #ec6169;
     font-size: 14px;
  

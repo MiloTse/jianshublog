@@ -55,10 +55,10 @@ class Header extends Component{
 
                 >
                     <SearchInfoTitle>
-                        热门搜索
+                        Hot Search
                         <SearchInfoSwitch onClick={() => handleChangePage(page, totalPage, this.spinIcon)}>
                             <span ref={(icon) => {this.spinIcon = icon}} className="iconfont spin">&#xe851;</span>
-                            换一批
+                            Refresh
                         </SearchInfoSwitch>
                     </SearchInfoTitle>
                     <SearchInfoList>
@@ -81,12 +81,12 @@ class Header extends Component{
                     <Logo />
                 </Link>
                 <Nav>
-                    <NavItem className='left active'>首页</NavItem>
-                    <NavItem className='left'>下载App</NavItem>
+                    <NavItem className='left active'>Home</NavItem>
+                    <NavItem className='left'>Download App</NavItem>
                     {
                     login ?
-                        <NavItem className='right'>退出</NavItem> :
-                        <Link to='/login'><NavItem className='right'>登录</NavItem></Link>
+                        <NavItem className='right'>Logout</NavItem> :
+                        <Link to='/login'><NavItem className='right'>Login</NavItem></Link>
                     }
 
                     <NavItem className='right'>
@@ -116,10 +116,10 @@ class Header extends Component{
                 </Nav>
                 <Addition>
                     <Button className='writting'>
-                        写文章
+                        Write
                         <span className="iconfont">&#xe629;</span>
                     </Button>
-                    <Button className='reg'>注册</Button>
+                    <Button className='reg'>Register</Button>
                 </Addition>
             </HeaderWrapper>
         );
