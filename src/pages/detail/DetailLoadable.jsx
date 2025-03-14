@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 
 const DetailComponent = React.lazy(() => import('./Detail'));
 
-const LoadableDetail = () => {
+const DetailLoadable = () => {
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <DetailComponent />
@@ -10,6 +10,6 @@ const LoadableDetail = () => {
     );
 };
 
-export default LoadableDetail;
+export default DetailLoadable;
 
 
