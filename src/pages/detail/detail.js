@@ -1,25 +1,25 @@
-import React ,{ Component} from "react";
+import React, { useEffect } from "react";
 import { DetailWrapper, DetailHeader, Content} from './style';
 import { connect} from "react-redux";
 import { actionCreators } from './store';
+import { useParams } from 'react-router-dom';
 
+const Detail = (props) => {
+    const { id } = useParams();
+    
+    useEffect(() => {
+        props.getDetail(id);
+    }, [id]);
 
-class Detail extends Component {
-
-  
-    render() {
-        return (
-            <DetailWrapper>
-                <DetailHeader>  {this.props.title}</DetailHeader>
-                <Content dangerouslySetInnerHTML={{__html: this.props.content}}/>
-             </DetailWrapper>
-        )
-    }
-
-    componentDidMount() {
-        this.props.getDetail();
-    }
-}
+    console.log("Detail props id:", id);
+    
+    return (
+        <DetailWrapper>
+            <DetailHeader>{props.title}</DetailHeader>
+            <Content dangerouslySetInnerHTML={{__html: props.content}}/>
+        </DetailWrapper>
+    );
+};
 
 const mapState = (state) => ({
     title: state.getIn(['detail', 'title']),
@@ -27,8 +27,8 @@ const mapState = (state) => ({
 });
 
 const mapDispatch = (dispatch) => ({
-    getDetail() {
-        dispatch(actionCreators.getDetail());
+    getDetail(id) {
+        dispatch(actionCreators.getDetail(id));
     }
 });
 

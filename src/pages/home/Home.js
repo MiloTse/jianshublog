@@ -66,7 +66,7 @@ const mapDispatch = (dispatch) => ({
         }else{
             dispatch(actionCreators.toggleTopShow(false))
         }
-        console.log(document.documentElement.scrollTop);
+        // console.log(document.documentElement.scrollTop);
     }
 })
 
