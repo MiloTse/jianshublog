@@ -1,12 +1,16 @@
-import React from 'react';
-import Loadable from 'react-loadable';
+import React, { Suspense } from 'react';
 import Loading from '../../common/loading';
 
-const LoadableComponent = Loadable({
-    loader: () => import('./Detail'),   
-    loading: Loading
-});
+const DetailComponent = React.lazy(() => import('./Detail'));
 
-export default () => <LoadableComponent/>;
+const LoadableDetail = () => {
+    return (
+        <Suspense fallback={<Loading />}>
+            <DetailComponent />
+        </Suspense>
+    );
+};
+
+export default LoadableDetail;
 
 
