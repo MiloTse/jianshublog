@@ -4,7 +4,7 @@ import { connect} from "react-redux";
 import { actionCreators } from '../store'
 import { Link} from "react-router-dom";
 
-class List extends PureComponent {
+class ArticleList extends PureComponent {
     render() {
         const { list, getMoreList, page } = this.props;
 
@@ -46,4 +46,4 @@ const mapDispatch = (dispatch) => ({
     }
 })
 
-export default connect(mapState, mapDispatch)(List);
+export default connect(mapState, mapDispatch)(ArticleList);

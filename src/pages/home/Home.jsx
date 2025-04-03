@@ -5,7 +5,7 @@ import {
     HomeRight
 } from './style';
 import Topic from './component/Topic';
-import List from './component/List';
+import ArticleList from './component/ArticleList';
 import Recommend from './component/Recommend';
 import Writer from './component/Writer';
 import {connect} from "react-redux";
@@ -23,7 +23,7 @@ class Home extends PureComponent {
                 <HomeLeft>
                     <img className='banner-img' alt="banner" src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
                     <Topic />
-                    <List />
+                    <ArticleList />
                 </HomeLeft>
                 <HomeRight>
                     <Recommend />
