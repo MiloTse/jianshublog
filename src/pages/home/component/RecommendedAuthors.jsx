@@ -20,17 +20,16 @@ class RecommendedAuthors extends PureComponent {
                     Refresh
                 </RecommendedAuthorsRefresh>
                 <RecommendedAuthorsItems/>
-                    <li>
-                        <ul>author1</ul>
-                        <ul>author2</ul>
-                        <ul>author3</ul>
-                        <ul>author4</ul>
-                        <ul>author5</ul>
-                        <ul>author6</ul>
-                        <ul>author7</ul>
-                        <ul>author8</ul>
-                        <ul>author9</ul>
-                    </li>
+                    <ul>
+                        <li>author1</li>
+                        <li>author2</li>
+                        <li>author3</li>
+                        <li>author4</li>
+                        <li>author5</li>
+                        <li>author6</li>
+                        <li>author7</li>
+                        <li>author8</li>
+                    </ul>
                 <RecommendedAuthorsItems/>
 
 
