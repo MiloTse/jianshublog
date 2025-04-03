@@ -84,6 +84,7 @@ export const ListInfo    = styled.div`
         line-height: 24px;
         font-size: 13px;
         color: #999;
+        margin-right: 2px; 
     }
 `;
 
@@ -167,6 +168,7 @@ export const BannerWrapper = styled.div`
     color: white;
   }
 `;
+
 
 
 
