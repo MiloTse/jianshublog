@@ -52,7 +52,8 @@ export const TopicItem    = styled.div`
         width: 32px;
         height: 32px;
         margin-right: 10px;
-        
+        margin-left: 2px;
+        border-radius: 8px;
     }
 `;
 
@@ -106,7 +107,7 @@ export const WriterWrapper    = styled.div`
     border-radius: 3px;
     height: 300px;
     line-height:300px;
-    text-aglign:center;
+    text-align:center;
 `;
 
 export const WriterItem    = styled.div`
