@@ -85,6 +85,8 @@ class Header extends Component{
                 <Nav>
                     <NavItem className='left active'>Home</NavItem>
                     <NavItem className='left'>Download App</NavItem>
+                    <NavItem className='left'>Member</NavItem>
+                    <NavItem className='left'>IT Tech</NavItem>
                     {
                     login ?
                         <NavItem  className='right' onClick={logout}>Logout</NavItem> :
@@ -119,8 +121,8 @@ class Header extends Component{
                 <Addition>
                     <Link to='/write'>
                         <Button className='writting'>
-                            Write
                             <span className="iconfont">&#xe629;</span>
+                            Write
                         </Button>
                     </Link>
 
