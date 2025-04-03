@@ -7,7 +7,7 @@ import {
 import Topic from './component/Topic';
 import ArticleList from './component/ArticleList';
 import Recommend from './component/Recommend';
-import Writer from './component/Writer';
+import RecommendedAuthors from './component/RecommendedAuthors';
 import {connect} from "react-redux";
 import { actionCreators } from './store'
 import { BackToTop } from './style'
@@ -27,7 +27,7 @@ class Home extends PureComponent {
                 </HomeLeft>
                 <HomeRight>
                     <Recommend />
-                    <Writer />
+                    <RecommendedAuthors />
                 </HomeRight>
                 {this.props.showScroll ?  <BackToTop onClick={this.handleScrollTop}>Back To Top</BackToTop> : null}
 

@@ -102,7 +102,7 @@ export const RecommendItem    = styled.div`
 `;
 
 
-export const WriterWrapper    = styled.div`
+export const RecommendedAuthorsWrapper    = styled.div`
     width: 278px;
     border: 1px solid #dcdcdc;
     border-radius: 3px;
@@ -111,7 +111,7 @@ export const WriterWrapper    = styled.div`
     text-align:center;
 `;
 
-export const WriterItem    = styled.div`
+export const RecommendedAuthorsItem    = styled.div`
     width: 280px;
     height: 50px;
      background: url(${(props) => props.imgUrl});
