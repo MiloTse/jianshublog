@@ -89,7 +89,7 @@ export const NavSearch = styled.input.attrs({
      color: #999;
     }
     &.focused {
-     width: 240px;
+     width: 320px;
     }
     &.slide-enter {
      width: 160px;
