@@ -142,6 +142,31 @@ export const BackToTop    = styled.div`
     cursor: pointer;
 `;
 
+export const BannerWrapper = styled.div`
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  
+  .banner-slider {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .banner-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .slick-dots {
+    bottom: 10px;
+  }
+  
+  .slick-dots li button:before {
+    color: white;
+  }
+`;
+
 
 
 
