@@ -167,6 +167,8 @@ export const SearchInfoItem = styled.a `
 export const Addition = styled.div `
     position: absolute;
     right: 0;
+    margin-right: 80px;
+    padding-right: 20px;
     top: 0;
     height: 56px;
     cursor: pointer;
