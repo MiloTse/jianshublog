@@ -111,7 +111,13 @@ export const RecommendedAuthorsWrapper    = styled.div`
     text-align:center;
 `;
 
-export const RecommendedAuthorsItem    = styled.div`
+export const RecommendedAuthorsRefresh    = styled.div`
+    width: 280px;
+    height: 20px;
+    background: red;
+`;
+
+export const RecommendedAuthorsItems    = styled.div`
     width: 280px;
     height: 50px;
      background: url(${(props) => props.imgUrl});
