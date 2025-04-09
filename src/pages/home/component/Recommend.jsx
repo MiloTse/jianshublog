@@ -13,19 +13,12 @@ class Recommend extends PureComponent {
                         />
                     })
                 }
-
-
-
-
-
-
             </RecommendWrapper>
         )
     }
 }
 
 const mapState = (state) => ({
-
     list: state.getIn(['home', 'recommendList'])
 });
 
