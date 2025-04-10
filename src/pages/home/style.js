@@ -102,44 +102,23 @@ export const RecommendItem    = styled.div`
 `;
 
 
-export const RecommendedAuthorsWrap    = styled.div`
-    display: block;
-    unicode-bidi: isolate;
-    box-sizing: border-box;
-     padding-top: 56px !important;
-    color: rgb(51, 51, 51);
-     background-color: #fff;
-    font-size: 17px;
-    height: 334px;
-    width: 280px;
-    line-height: 24px;
-  
-
+export const RecommendedAuthorsWrap = styled.div`
+    margin-bottom: 20px;
 `;
 
-export const RecommendedAuthorsInfo  = styled.div`
-    text-align:left;
-   .list {
-      margin: 0 0 20px;
-      text-align: left;
-      list-style: none;
-        .avatar {
-          display: block;
-          float: left;
-          width: 3px;
-          height: 3px;
-          margin-right: 10px;
-          margin-left: 2px;
-          border-radius: 8px;
-       }
-   }
- 
- 
- `;
-export const RecommendedAuthorsTitle    = styled.div`
-    text-align:left;
- 
- `;
+export const RecommendedAuthorsInfo = styled.div`
+    margin: 0 0 20px;
+`;
+
+export const RecommendedAuthorsTitle = styled.div`
+    font-size: 14px;
+    color: #969696;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+`;
+
 
 export const RecommendedAuthorsRefresh    = styled.div`
   float: right;
@@ -154,73 +133,76 @@ export const RecommendedAuthorsRefresh    = styled.div`
    transform-origin: center center;
   }
 `;
-
-export const RecommendedAuthorsList    = styled.ul`
- margin: 0 0 20px;
- text-align: left;
- list-style: none;
+export const RecommendedAuthorsList = styled.ul`
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
 `;
 
+
 export const RecommendedAuthorsItem = styled.li`
-    margin-top: 15px;
-    line-height: 20px;
- 
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    height: 47px;
     .avatar {
-        float: left;
+        display: block;
         width: 48px;
         height: 48px;
         margin-right: 10px;
-        
         img {
             width: 100%;
             height: 100%;
-            border: 1px solid #ddd;
             border-radius: 50%;
+            border: 1px solid #ddd;
         }
     }
     
     .info {
-        padding-top: 5px;
-        margin-right: 60px;
-        
+        flex: 1;
         .name {
-            padding-top: 5px;
+            display: block;
             font-size: 14px;
             color: #333;
+            margin-bottom: 10px;
+            text-decoration: none;
         }
         
         p {
-            margin-top: 2px;
+            margin: 0;
             font-size: 12px;
             color: #969696;
         }
     }
     
     .follow {
-        float: right;
-        margin-top: 5px;
-        padding: 0;
+        width: 50px;
+        margin-left: 20px;
         font-size: 13px;
         color: #42c02e;
-        
+        text-align: right;
         i {
-            font-size: 12px;
+            font-size: 13px;
             margin-right: 2px;
         }
     }
-    
-    &:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-
 `;
 
-export const SeeAllButton    = styled.div`
-  margin: 0 0 20px;
-  text-align: left;
-  list-style: none;
+export const SeeAllButton = styled.div`
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 13px;
+    color: #787878;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    &:hover {
+        background-color: #eeeeee;
+    }
 `;
 
 export const LoadMore    = styled.div`
