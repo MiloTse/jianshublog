@@ -102,17 +102,40 @@ export const RecommendItem    = styled.div`
 `;
 
 
-export const RecommendedAuthorsInfo    = styled.div`
+export const RecommendedAuthorsWrap    = styled.div`
     display: block;
     unicode-bidi: isolate;
     box-sizing: border-box;
-     padding-top: 56px !important;  
- 
-    line-height: 1.42857;
-    background-color: #fff;
+     padding-top: 56px !important;
+    color: rgb(51, 51, 51);
+     background-color: #fff;
+    font-size: 17px;
+    height: 334px;
+    width: 280px;
+    line-height: 24px;
+  
 
 `;
 
+export const RecommendedAuthorsInfo  = styled.div`
+    text-align:left;
+   .list {
+      margin: 0 0 20px;
+      text-align: left;
+      list-style: none;
+        .avatar {
+          display: block;
+          float: left;
+          width: 3px;
+          height: 3px;
+          margin-right: 10px;
+          margin-left: 2px;
+          border-radius: 8px;
+       }
+   }
+ 
+ 
+ `;
 export const RecommendedAuthorsTitle    = styled.div`
     text-align:left;
  
@@ -132,13 +155,17 @@ export const RecommendedAuthorsRefresh    = styled.div`
   }
 `;
 
-export const RecommendedAuthorsItems    = styled.div`
-    width: 280px;
-    height: 50px;
-     background: url(${(props) => props.imgUrl});
-    //background: url(${logoPic});
-    background-size: contain;
+export const RecommendedAuthorsList    = styled.div`
+  margin: 0 0 20px;
+  text-align: left;
+  list-style: none;
 `;
+
+
+
+
+
+
 
 export const LoadMore    = styled.div`
     width: 100%;
