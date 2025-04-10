@@ -102,19 +102,34 @@ export const RecommendItem    = styled.div`
 `;
 
 
-export const RecommendedAuthorsWrapper    = styled.div`
-    width: 278px;
-    border: 1px solid #dcdcdc;
-    border-radius: 3px;
-    height: 300px;
-    line-height:300px;
-    text-align:center;
+export const RecommendedAuthorsInfo    = styled.div`
+    display: block;
+    unicode-bidi: isolate;
+    box-sizing: border-box;
+     padding-top: 56px !important;  
+ 
+    line-height: 1.42857;
+    background-color: #fff;
+
 `;
 
+export const RecommendedAuthorsTitle    = styled.div`
+    text-align:left;
+ 
+ `;
+
 export const RecommendedAuthorsRefresh    = styled.div`
-    width: 280px;
-    height: 20px;
-    background: red;
+  float: right;
+  font-size: 13px;
+  cursor: pointer;
+  .spin {
+   display: block;
+   float: left;
+   font-size: 12px;
+   margin-right: 2px;
+   transition: all .2s ease-in;
+   transform-origin: center center;
+  }
 `;
 
 export const RecommendedAuthorsItems    = styled.div`
