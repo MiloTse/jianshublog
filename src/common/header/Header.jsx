@@ -83,7 +83,7 @@ class Header extends Component{
                     <Logo />
                 </Link>
                 <Nav>
-                    <NavItem className='left active'>Home</NavItem>
+                    <Link to='/'> <NavItem className='left active' >Home</NavItem></Link>
                     <NavItem className='left'>Download App</NavItem>
                     <NavItem className='left'>Member</NavItem>
                     <NavItem className='left'>IT Tech</NavItem>
