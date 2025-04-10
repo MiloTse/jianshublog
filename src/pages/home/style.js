@@ -134,10 +134,14 @@ export const RecommendedAuthorsRefresh    = styled.div`
   }
 `;
 export const RecommendedAuthorsList = styled.ul`
-    margin: 0;
     padding: 0;
     text-align: left;
     list-style: none;
+    line-height: 20px;
+    margin-top: 30px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
 `;
 
 
@@ -158,7 +162,6 @@ export const RecommendedAuthorsItem = styled.li`
             border: 1px solid #ddd;
         }
     }
-    
     .info {
         flex: 1;
         .name {
@@ -168,7 +171,6 @@ export const RecommendedAuthorsItem = styled.li`
             margin-bottom: 10px;
             text-decoration: none;
         }
-        
         p {
             margin: 0;
             font-size: 12px;
