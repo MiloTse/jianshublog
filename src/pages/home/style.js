@@ -190,16 +190,20 @@ export const RecommendedAuthorsItem = styled.li`
 `;
 
 export const SeeAllButton = styled.div`
+    border: 1px solid #dcdcdc;
     width: 100%;
     height: 35px;
+    
+    left: 0;
     line-height: 35px;
-    text-align: center;
+    padding: 7px 7px 7px 12px;
+    text-align: left;
     font-size: 13px;
     color: #787878;
     background-color: #f7f7f7;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
     &:hover {
         background-color: #eeeeee;
     }
