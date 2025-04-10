@@ -31,7 +31,6 @@ class RecommendedAuthors extends PureComponent {
                         {/* should fetch data from server and integrate into this component*/}
                         <RecommendedAuthorsList>
                             <RecommendedAuthorsItem>
-                                <li className="recommended-authors-item">
                                     <a className="avatar">
                                         <img
                                             src="https://upload.jianshu.io/users/upload_avatars/7663825/7c28763e-002b-4e89-8dea-5b8da210ef2c.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"
@@ -44,11 +43,10 @@ class RecommendedAuthors extends PureComponent {
                                     <a className="follow">
                                         <i className="iconfont ic-follow">+</i>关注
                                     </a>
-                                </li>
+
 
                             </RecommendedAuthorsItem>
                             <RecommendedAuthorsItem>
-                                <li className="recommended-authors-item">
                                     <a className="avatar">
                                         <img
                                             src="https://upload.jianshu.io/users/upload_avatars/9988193/fc26c109-1ae6-4327-a298-2def343e9cd8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"
@@ -61,7 +59,7 @@ class RecommendedAuthors extends PureComponent {
                                     <a className="follow">
                                         <i className="iconfont ic-follow">+</i>关注
                                     </a>
-                                </li>
+
                             </RecommendedAuthorsItem>
                         </RecommendedAuthorsList>
                     </RecommendedAuthorsInfo>
