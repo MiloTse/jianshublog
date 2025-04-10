@@ -155,17 +155,73 @@ export const RecommendedAuthorsRefresh    = styled.div`
   }
 `;
 
-export const RecommendedAuthorsList    = styled.div`
+export const RecommendedAuthorsList    = styled.ul`
+ margin: 0 0 20px;
+ text-align: left;
+ list-style: none;
+`;
+
+export const RecommendedAuthorsItem = styled.li`
+    margin-top: 15px;
+    line-height: 20px;
+ 
+    .avatar {
+        float: left;
+        width: 48px;
+        height: 48px;
+        margin-right: 10px;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+        }
+    }
+    
+    .info {
+        padding-top: 5px;
+        margin-right: 60px;
+        
+        .name {
+            padding-top: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+        
+        p {
+            margin-top: 2px;
+            font-size: 12px;
+            color: #969696;
+        }
+    }
+    
+    .follow {
+        float: right;
+        margin-top: 5px;
+        padding: 0;
+        font-size: 13px;
+        color: #42c02e;
+        
+        i {
+            font-size: 12px;
+            margin-right: 2px;
+        }
+    }
+    
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+`;
+
+export const SeeAllButton    = styled.div`
   margin: 0 0 20px;
   text-align: left;
   list-style: none;
 `;
-
-
-
-
-
-
 
 export const LoadMore    = styled.div`
     width: 100%;
@@ -216,19 +272,6 @@ export const BannerWrapper = styled.div`
     color: white;
   }
 `;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
