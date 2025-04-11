@@ -1,5 +1,6 @@
-import React ,{ PureComponent} from "react";
+import React, {PureComponent, useState} from "react";
 import {
+    BackToTop,
     HomeWrapper,
     HomeLeft,
     HomeRight
@@ -10,16 +11,32 @@ import Recommend from './component/Recommend';
 import RecommendedAuthors from './component/RecommendedAuthors';
 import {connect} from "react-redux";
 import { actionCreators } from './store'
-import { BackToTop } from './style'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 
 class Home extends PureComponent {
+    constructor(props) {
+        super(props);
+        this.state = {
+            page: 1
+        };
+        //need to bind
+        this.handleSlideChange = this.handleSlideChange.bind(this);
+    }
+     handleSlideChange(swiper) {
+        this.setState({
+            page: swiper.activeIndex + 1
+        });
+        console.log(swiper.activeIndex);
+    }
+
     handleScrollTop(){
         window.scrollTo(0,0);
     }
     render() {
+
+
         return (
             <HomeWrapper>
                 <HomeLeft>
@@ -27,37 +44,26 @@ class Home extends PureComponent {
                         <Swiper
                             spaceBetween={0}
                             slidesPerView={1}
-                            onSlideChange={() => console.log('slide change')}
+                            onSlideChange={this.handleSlideChange}
                         >
                             <SwiperSlide>
-                                <div>
+                                <div className="swiper-item">
                                     <img className='banner-img' alt="banner"
                                          src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
 
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div>
+                                <div className="swiper-item">
                                     <img className='banner-img' alt="banner"
                                          src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
 
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide>
-                                <div>
-                                    <img className='banner-img' alt="banner"
-                                         src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
 
-                                </div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div>
-                                    <img className='banner-img' alt="banner"
-                                         src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
-
-                                </div>
-                            </SwiperSlide>
                         </Swiper>
+                        <div className="pagination">{this.state.page}/2</div>
+
                     </div>
 
                     <Topic/>
