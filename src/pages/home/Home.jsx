@@ -11,6 +11,8 @@ import RecommendedAuthors from './component/RecommendedAuthors';
 import {connect} from "react-redux";
 import { actionCreators } from './store'
 import { BackToTop } from './style'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 
 class Home extends PureComponent {
@@ -21,19 +23,45 @@ class Home extends PureComponent {
         return (
             <HomeWrapper>
                 <HomeLeft>
-                    <img className='banner-img' alt="banner" src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
-                    <Topic />
-                    <ArticleList />
+                    <div className="swiper-area">
+                        <Swiper
+                            spaceBetween={0}
+                            slidesPerView={1}
+                            onSlideChange={() => console.log('slide change')}
+                        >
+                            <SwiperSlide>
+                                <img className='banner-img' alt="banner"
+                                     src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img className='banner-img' alt="banner"
+                                     src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
+
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img className='banner-img' alt="banner"
+                                               src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img className='banner-img' alt="banner"
+                                               src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
+                            </SwiperSlide>
+                        </Swiper>
+                    </div>
+
+                    <Topic/>
+                    <ArticleList/>
                 </HomeLeft>
                 <HomeRight>
-                    <Recommend />
-                    <RecommendedAuthors />
+                    <Recommend/>
+                    <RecommendedAuthors/>
                 </HomeRight>
-                {this.props.showScroll ?  <BackToTop onClick={this.handleScrollTop}>Back To Top</BackToTop> : null}
+                {this.props.showScroll ? <BackToTop onClick={this.handleScrollTop}>Back To Top</BackToTop> : null}
 
             </HomeWrapper>
         )
     }
+
     componentDidMount() {
         this.props.changeHomeData();
         this.bindEvents();
@@ -44,7 +72,7 @@ class Home extends PureComponent {
 
     }
 
-    bindEvents(){
+    bindEvents() {
         window.addEventListener('scroll', this.props.changeScrollTopShow)
     }
 }
