@@ -30,21 +30,32 @@ class Home extends PureComponent {
                             onSlideChange={() => console.log('slide change')}
                         >
                             <SwiperSlide>
-                                <img className='banner-img' alt="banner"
-                                     src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img className='banner-img' alt="banner"
-                                     src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
+                                <div>
+                                    <img className='banner-img' alt="banner"
+                                         src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
 
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img className='banner-img' alt="banner"
-                                               src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
+                                <div>
+                                    <img className='banner-img' alt="banner"
+                                         src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
+
+                                </div>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img className='banner-img' alt="banner"
-                                               src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
+                                <div>
+                                    <img className='banner-img' alt="banner"
+                                         src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
+
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div>
+                                    <img className='banner-img' alt="banner"
+                                         src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
+
+                                </div>
                             </SwiperSlide>
                         </Swiper>
                     </div>
