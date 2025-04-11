@@ -14,23 +14,35 @@ export const HomeLeft = styled.div`
     margin-left: 15px;
     padding-top: 30px;
     width: 625px;
-    .banner-img {
+
+    .swiper-area {
+        position: relative;
         width: 625px;
         height: 270px;
     }
+
     .pagination {
+        position: absolute;
+        right: 300px;
+        bottom: 10px;
+        transform: none;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #c3fef5;
+        padding: 3px 3px;
+        border-radius: 12px;
+        font-size: 25px;
+        line-height: 1;
+    }
+
+    .banner-img {
+        width: 625px;
+        height: 270px;
+        object-fit: cover;
+    }
+
+    .swiper-item {
         position: relative;
-        z-index:999;
-        left:50%;
-        bottom:.26rem;
-        transform: translatex(-50%);
-        color: #FFF;
-        font-size: 2rem;
-        line-height: 2rem;
-        text-align: center;
-        background:red;
-        border-radius: .1rem;
-        padding:0 .1rem;
     }
 `;
 
