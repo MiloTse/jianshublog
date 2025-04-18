@@ -9,11 +9,17 @@ import {
     SeeAllButton
 } from '../style';
 import { connect} from "react-redux";
+import { actionCreators } from '../store';
 
 //RecommendedAuthors
 class RecommendedAuthors extends PureComponent {
+    componentDidMount() {
+        this.props.getRecommendedAuthors();
+    }
 
     render() {
+        const { recommendedAuthors } = this.props;
+        
         return (
             <>
                 <RecommendedAuthorsWrap>
@@ -26,42 +32,28 @@ class RecommendedAuthors extends PureComponent {
                             </RecommendedAuthorsRefresh>
                         </RecommendedAuthorsTitle>
 
-
-
-                        {/* should fetch data from server and integrate into this component*/}
-                        <RecommendedAuthorsList>
-                            <RecommendedAuthorsItem>
-                                    <a className="avatar">
-                                        <img
-                                            src="https://upload.jianshu.io/users/upload_avatars/7663825/7c28763e-002b-4e89-8dea-5b8da210ef2c.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"
-                                            alt="author"/>
-                                    </a>
-                                    <div className="info">
-                                        <a className="name">名贵的考拉熊</a>
-                                        <p>写了311.2k字 · 19.9k喜欢</p>
-                                    </div>
-                                    <a className="follow">
-                                        <i className="iconfont ic-follow">+</i>关注
-                                    </a>
-
-
-                            </RecommendedAuthorsItem>
-                            <RecommendedAuthorsItem>
-                                    <a className="avatar">
-                                        <img
-                                            src="https://upload.jianshu.io/users/upload_avatars/9988193/fc26c109-1ae6-4327-a298-2def343e9cd8.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/96/h/96/format/webp"
-                                            alt="author"/>
-                                    </a>
-                                    <div className="info">
-                                        <a className="name">董克平日记</a>
-                                        <p>写了1258.7k字 · 5.8k喜欢</p>
-                                    </div>
-                                    <a className="follow">
-                                        <i className="iconfont ic-follow">+</i>关注
-                                    </a>
-
-                            </RecommendedAuthorsItem>
-                        </RecommendedAuthorsList>
+                        {recommendedAuthors && recommendedAuthors.size > 0 ? (
+                            <RecommendedAuthorsList>
+                                {recommendedAuthors.map((item, index) => (
+                                    <RecommendedAuthorsItem key={item.get('id') || index}>
+                                        <a className="avatar">
+                                            <img
+                                                src={item.get('avatar')}
+                                                alt={item.get('name')}/>
+                                        </a>
+                                        <div className="info">
+                                            <a className="name">{item.get('name')}</a>
+                                            <p>写了{item.get('wordCount')}字 · {item.get('likeCount')}喜欢</p>
+                                        </div>
+                                        <a className="follow">
+                                            <i className="iconfont ic-follow">+</i>关注
+                                        </a>
+                                    </RecommendedAuthorsItem>
+                                ))}
+                            </RecommendedAuthorsList>
+                        ) : (
+                            <div>加载中...</div>
+                        )}
                     </RecommendedAuthorsInfo>
                 </RecommendedAuthorsWrap>
                 <SeeAllButton>查看全部 {'>'}</SeeAllButton>
@@ -70,10 +62,18 @@ class RecommendedAuthors extends PureComponent {
     }
 
     handleRefreshClick = () => {
-        alert('refresh done');
-        console.log('refresh recommended authors');
+        this.props.getRecommendedAuthors();
     }
 }
 
+const mapState = (state) => ({
+    recommendedAuthors: state.getIn(['home', 'recommendedAuthors'])
+});
 
-export default RecommendedAuthors;
+const mapDispatch = (dispatch) => ({
+    getRecommendedAuthors() {
+        dispatch(actionCreators.getRecommendedAuthors());
+    }
+});
+
+export default connect(mapState, mapDispatch)(RecommendedAuthors);

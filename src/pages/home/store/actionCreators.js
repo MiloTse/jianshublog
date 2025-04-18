@@ -44,3 +44,20 @@ export const toggleTopShow = (show) => ({
     type: constants.TOGGLE_SCROLL_TOP,
     show
 })
+
+export const updateRecommendedAuthors = (authors) => ({
+    type: constants.UPDATE_RECOMMENDED_AUTHORS,
+    authors: fromJS(authors)
+});
+
+export const getRecommendedAuthors = () => {
+    return (dispatch) => {
+        axios.get('/api/recommendedAuthors.json')
+            .then((res) => {
+                dispatch(updateRecommendedAuthors(res.data));
+            })
+            .catch((err) => {
+                console.error('Error fetching recommended authors:', err);
+            });
+    };
+};
