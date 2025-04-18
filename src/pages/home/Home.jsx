@@ -13,7 +13,9 @@ import {connect} from "react-redux";
 import { actionCreators } from './store'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-
+ import image01 from '../../assets/banner_01.png';
+ import image02 from '../../assets/banner_02.png'
+ import logoPic from '../../statics/logo.png'
 
 class Home extends PureComponent {
     constructor(props) {
@@ -49,14 +51,14 @@ class Home extends PureComponent {
                             <SwiperSlide>
                                 <div className="swiper-item">
                                     <img className='banner-img' alt="banner"
-                                         src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
+                                         src={image01}/>
 
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="swiper-item">
                                     <img className='banner-img' alt="banner"
-                                         src="https://upload.jianshu.io/admin_banners/web_images/4318/60781ff21df1d1b03f5f8459e4a1983c009175a5.jpg?imageMogr2/auto-orient/strip/imageView2/1/w/1250/h/540"/>
+                                         src={image02}/>
 
                                 </div>
                             </SwiperSlide>
