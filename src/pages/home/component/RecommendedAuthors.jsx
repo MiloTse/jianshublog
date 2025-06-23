@@ -25,10 +25,10 @@ class RecommendedAuthors extends PureComponent {
                 <RecommendedAuthorsWrap>
                     <RecommendedAuthorsInfo>
                         <RecommendedAuthorsTitle>
-                            <span>推荐作者</span>
+                            <span>Recommended Authors</span>
                             <RecommendedAuthorsRefresh onClick={this.handleRefreshClick}>
                                 <span className="iconfont spin">&#xe851;</span>
-                                换一批
+                                Refresh
                             </RecommendedAuthorsRefresh>
                         </RecommendedAuthorsTitle>
 
@@ -43,20 +43,20 @@ class RecommendedAuthors extends PureComponent {
                                         </a>
                                         <div className="info">
                                             <a className="name">{item.get('name')}</a>
-                                            <p>写了{item.get('wordCount')}字 · {item.get('likeCount')}喜欢</p>
+                                            <p>Wrote {item.get('wordCount')} words · {item.get('likeCount')} likes</p>
                                         </div>
                                         <a className="follow">
-                                            <i className="iconfont ic-follow">+</i>关注
+                                            <i className="iconfont ic-follow">+</i>Follow
                                         </a>
                                     </RecommendedAuthorsItem>
                                 ))}
                             </RecommendedAuthorsList>
                         ) : (
-                            <div>加载中...</div>
+                            <div>Loading...</div>
                         )}
                     </RecommendedAuthorsInfo>
                 </RecommendedAuthorsWrap>
-                <SeeAllButton>查看全部 {'>'}</SeeAllButton>
+                <SeeAllButton>See All {'>'}</SeeAllButton>
             </>
         )
     }
