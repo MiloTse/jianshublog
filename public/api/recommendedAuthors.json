@@ -1,7 +1,7 @@
 [
   {
     "id" :  1,
-    "name" :  "卢欣说",
+    "name" :  "Lu Xing",
     "avatar" :  "../author_avatar/01.png",
     "following" :  false,
     "wordCount" :  "7229.8k",
@@ -9,7 +9,7 @@
   },
   {
     "id" :  2,
-    "name" :  "茶点故事",
+    "name" :  "Tea Story",
     "avatar" :  "../author_avatar/02.png",
     "following" :  false,
     "wordCount" :  "13358.4k",
@@ -17,7 +17,7 @@
   },
   {
     "id" :  3,
-    "name" :  "老沈1",
+    "name" :  "Lao Shen",
     "avatar" :  "../author_avatar/03.png",
     "following" :  false,
     "wordCount" :  "747.k",
@@ -25,7 +25,7 @@
   },
   {
     "id" :  4,
-    "name" :  "胡七简",
+    "name" :  "Hu Qi Jian",
     "avatar" :  "../author_avatar/04.png",
     "following" :  false,
     "wordCount" :  "115.3k",
@@ -33,7 +33,7 @@
   },
   {
     "id" :  5,
-    "name" :  "念远怀人",
+    "name" :  "Nian Yuan Huai Ren",
     "avatar" :  "../author_avatar/05.png",
     "following" :  false,
     "wordCount" :  "727.6k",
