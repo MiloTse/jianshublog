@@ -52,7 +52,7 @@
     "recommendList": [
       {
         "id": 1,
-        "imgUrl": "/api/images/recommend/hot_in_7_days.png"
+        "imgUrl": "/api/images/recommend/hot_in_7_days_eng.png"
       },
       {
         "id": 2,
