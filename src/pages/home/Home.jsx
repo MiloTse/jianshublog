@@ -13,8 +13,8 @@ import {connect} from "react-redux";
 import { actionCreators } from './store'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
- import image01 from '../../assets/banner_01.png';
- import image02 from '../../assets/banner_02.png'
+ import image01 from '../../assets/banner_00.png';
+ import image02 from '../../assets/banner_00.png'
  import logoPic from '../../statics/logo.png'
 
 class Home extends PureComponent {
