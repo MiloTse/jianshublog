@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 
 import styled from "styled-components";
-import logoPic from '../../statics/logo.png'
+import logoPic from '../../statics/logo_simwrite.png'
 
 
 export const HeaderWrapper = styled.div `
