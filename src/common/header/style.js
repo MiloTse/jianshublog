@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import styled from "styled-components";
 import logoPic from '../../statics/logo.png'
 
@@ -38,6 +40,16 @@ export const NavItem = styled.div`
     font-size: 17px;
     color: #333;
     cursor: pointer;
+    &.left{
+     float: left;
+    }
+    &.right {
+     float: right;
+     color: #969696;
+    }
+    &.active{
+     color: #ea6f5a;
+    }
  `;
 
 export const SearchWrapper = styled.div`
