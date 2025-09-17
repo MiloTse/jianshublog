@@ -49,19 +49,19 @@ class RecommendedAuthors extends PureComponent {
                             <RecommendedAuthorsList>
                                 {displayAuthors.map((item, index) => (
                                     <RecommendedAuthorsItem key={item.get('id') || index}>
-                                        <a className="avatar">
+                                        <div className="avatar">
                                             <img
                                                 src={item.get('avatar')}
                                                 alt={item.get('name')}/>
-                                        </a>
+                                        </div>
                                         <div className="info">
-                                            <a className="name">{item.get('name')}</a>
+                                            <div className="name">{item.get('name')}</div>
                                             <p className="words">Wrote {item.get('wordCount')} words</p>
                                             <p className="likes">{item.get('likeCount')} likes</p>
                                         </div>
-                                        <a className="follow">
-                                            <i className="iconfont ic-follow">+</i>Follow
-                                        </a>
+                                        <button className="follow">
+                                            <span className="plus-icon">+</span>Follow
+                                        </button>
                                     </RecommendedAuthorsItem>
                                 ))}
                             </RecommendedAuthorsList>
