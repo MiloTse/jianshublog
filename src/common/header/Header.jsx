@@ -20,7 +20,7 @@ import {
     Addition,
     Button
 } from "./style";
-import {logout} from "../../pages/login/store/actionCreators";
+// import {logout} from "../../pages/login/store/actionCreators";
 
 class Header extends Component{
     constructor(props) {
