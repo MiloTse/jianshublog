@@ -1,4 +1,4 @@
-import React, {PureComponent, useState} from "react";
+import React, {PureComponent} from "react";
 import {
     BackToTop,
     HomeWrapper,
@@ -15,7 +15,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
  import image01 from '../../assets/banner_00.png';
  import image02 from '../../assets/banner_00.png'
- import logoPic from '../../statics/logo.png'
+// import logoPic from '../../statics/logo.png'
 
 class Home extends PureComponent {
     constructor(props) {
