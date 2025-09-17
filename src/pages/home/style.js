@@ -176,6 +176,7 @@ export const RecommendedAuthorsItem = styled.li`
     align-items: flex-start;
     min-height: 47px;
     padding: 5px 0;
+    position: relative;
     .avatar {
         display: block;
         width: 48px;
@@ -190,21 +191,25 @@ export const RecommendedAuthorsItem = styled.li`
     }
     .info {
         flex: 1;
-        padding-top: 2px;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         .name {
             display: block;
             font-size: 14px;
             color: #333;
-            margin-bottom: 5px;
-            margin-top: 3px;
-            text-decoration: none;
+            margin-bottom: 4px;
+            margin-top: 0;
             line-height: 1.2;
+            cursor: pointer;
+            font-weight: 500;
         }
         p {
             margin: 0;
             font-size: 12px;
             color: #969696;
-            line-height: 1.4;
+            line-height: 1.3;
             word-wrap: break-word;
         }
         .words {
@@ -216,16 +221,37 @@ export const RecommendedAuthorsItem = styled.li`
     }
     
     .follow {
-        width: 50px;
-        margin-left: 20px;
+        width: auto;
+        min-width: 50px;
+        margin-left: 15px;
+        padding: 0;
         font-size: 13px;
         color: #42c02e;
-        text-align: right;
-        padding-top: 2px;
-        flex-shrink: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        line-height: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        text-decoration: none;
+        white-space: nowrap;
+        .plus-icon {
+            font-size: 13px;
+            margin-right: 2px;
+            font-weight: bold;
+        }
         i {
             font-size: 13px;
             margin-right: 2px;
+            font-style: normal;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+        &:focus {
+            outline: none;
         }
     }
 `;
