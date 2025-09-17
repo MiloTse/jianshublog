@@ -56,7 +56,8 @@ class RecommendedAuthors extends PureComponent {
                                         </a>
                                         <div className="info">
                                             <a className="name">{item.get('name')}</a>
-                                            <p>Wrote {item.get('wordCount')} words · {item.get('likeCount')} likes</p>
+                                            <p className="words">Wrote {item.get('wordCount')} words</p>
+                                            <p className="likes">{item.get('likeCount')} likes</p>
                                         </div>
                                         <a className="follow">
                                             <i className="iconfont ic-follow">+</i>Follow
