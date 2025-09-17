@@ -173,8 +173,9 @@ export const RecommendedAuthorsList = styled.ul`
 export const RecommendedAuthorsItem = styled.li`
     margin-bottom: 15px;
     display: flex;
-    align-items: center;
-    height: 47px;
+    align-items: flex-start;
+    min-height: 47px;
+    padding: 5px 0;
     .avatar {
         display: block;
         width: 48px;
@@ -189,6 +190,7 @@ export const RecommendedAuthorsItem = styled.li`
     }
     .info {
         flex: 1;
+        padding-top: 2px;
         .name {
             display: block;
             font-size: 14px;
@@ -196,11 +198,20 @@ export const RecommendedAuthorsItem = styled.li`
             margin-bottom: 5px;
             margin-top: 3px;
             text-decoration: none;
+            line-height: 1.2;
         }
         p {
             margin: 0;
             font-size: 12px;
             color: #969696;
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+        .words {
+            margin-bottom: 2px;
+        }
+        .likes {
+            margin: 0;
         }
     }
     
@@ -210,6 +221,8 @@ export const RecommendedAuthorsItem = styled.li`
         font-size: 13px;
         color: #42c02e;
         text-align: right;
+        padding-top: 2px;
+        flex-shrink: 0;
         i {
             font-size: 13px;
             margin-right: 2px;
