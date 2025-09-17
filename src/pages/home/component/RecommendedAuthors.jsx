@@ -13,12 +13,25 @@ import { actionCreators } from '../store';
 
 //RecommendedAuthors
 class RecommendedAuthors extends PureComponent {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showAll: false
+        };
+    }
+
     componentDidMount() {
         this.props.getRecommendedAuthors();
     }
 
     render() {
         const { recommendedAuthors } = this.props;
+        const { showAll } = this.state;
+        
+        // 根据showAll状态决定显示的作者数量
+        const displayAuthors = recommendedAuthors && recommendedAuthors.size > 0 
+            ? (showAll ? recommendedAuthors : recommendedAuthors.slice(0, 2))
+            : null;
         
         return (
             <>
@@ -32,9 +45,9 @@ class RecommendedAuthors extends PureComponent {
                             </RecommendedAuthorsRefresh>
                         </RecommendedAuthorsTitle>
 
-                        {recommendedAuthors && recommendedAuthors.size > 0 ? (
+                        {displayAuthors ? (
                             <RecommendedAuthorsList>
-                                {recommendedAuthors.map((item, index) => (
+                                {displayAuthors.map((item, index) => (
                                     <RecommendedAuthorsItem key={item.get('id') || index}>
                                         <a className="avatar">
                                             <img
@@ -56,13 +69,23 @@ class RecommendedAuthors extends PureComponent {
                         )}
                     </RecommendedAuthorsInfo>
                 </RecommendedAuthorsWrap>
-                <SeeAllButton>See All {'>'}</SeeAllButton>
+                {recommendedAuthors && recommendedAuthors.size > 2 && (
+                    <SeeAllButton onClick={this.handleSeeAllClick}>
+                        {showAll ? 'Show Less' : 'See All >'}
+                    </SeeAllButton>
+                )}
             </>
         )
     }
 
     handleRefreshClick = () => {
         this.props.getRecommendedAuthors();
+    }
+
+    handleSeeAllClick = () => {
+        this.setState({
+            showAll: !this.state.showAll
+        });
     }
 }
 
