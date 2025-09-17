@@ -193,7 +193,8 @@ export const RecommendedAuthorsItem = styled.li`
             display: block;
             font-size: 14px;
             color: #333;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+            margin-top: 3px;
             text-decoration: none;
         }
         p {
